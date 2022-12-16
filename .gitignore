@@ -1,2 +1,5 @@
 # excluding binaries
 .terraform
+
+# excluding backup file for terraform state
+terraform.tfstate.backup
