@@ -78,17 +78,18 @@ resource "aws_key_pair" "mtc_auth" {
 resource "aws_instance" "foo" {
   ami           = data.aws_ami.server_ami.id
   instance_type = "t2.micro"
-
-  tags = {
-    Name = "dev-node"
-  }
-
-  key_name = aws_key_pair.mtc_auth.id
+  key_name      = aws_key_pair.mtc_auth.id
 
   vpc_security_group_ids = [aws_security_group.mtc_sg.id]
-  subnet_id = aws_subnet.mtc_public_subnet.id
+  subnet_id              = aws_subnet.mtc_public_subnet.id
+
+  user_data = file("userdata.tpl")
 
   root_block_device {
     volume_size = 8
+  }
+
+  tags = {
+    Name = "dev-node"
   }
 }
