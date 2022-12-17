@@ -75,7 +75,7 @@ resource "aws_key_pair" "mtc_auth" {
   public_key = file("~/.ssh/mtckey.pub")
 }
 
-resource "aws_instance" "foo" {
+resource "aws_instance" "dev_node" {
   ami           = data.aws_ami.server_ami.id
   instance_type = "t2.micro"
   key_name      = aws_key_pair.mtc_auth.id
