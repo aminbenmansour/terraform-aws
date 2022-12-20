@@ -1,5 +1,11 @@
 # terraform-aws
 
+Putting together AWS services to establish a development environment on the cloud.
+Terraform took place to define our architecture iteratively, in a way that helps us to reproduce our architecture in the future.
+An SSH connection is established from our local VScode editor to the remote EC2 instance on the cloud.
+
+## Architecture
+
 ## Usage
 * Generating a public key pair for use when authenticating with a remote server (eg. ed25519)
 ```
