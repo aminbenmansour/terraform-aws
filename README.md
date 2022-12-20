@@ -31,4 +31,4 @@ ssh-keygen -t <cryptography_method>
 ```
 ssh -i ~/.ssh/<PRIVATE_KEY_FILE> <USERNAME>@<INSTANCE_PUBLIC_IPV4_ADDRESS>
 ```
-* Alternative way (recommended), use the remote SSH configuration.
+* Alternative way (recommended), use the `Remote - SSH` extension.
