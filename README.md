@@ -19,7 +19,8 @@ Amazon Web Services toolkit for browsing and updating cloud resources
 Add a user with a programatic access and assign and attach administrator policies to user so we have full access to AWS account. Finally create an access credentials profile and fill the aws access and secret keys and link it to the extension above.
 ### Extention Remote - SSH
 Open any folder on a remote machine using SSH and take advantage of VS Code's full feature set.
-
+### Extension Terraform
+Adds syntax support for the Terraform and Terragrunt configuration language.
 ## Usage
 * Generating a public key pair for use when authenticating with a remote server (eg. ed25519)
 ```
@@ -30,3 +31,4 @@ ssh-keygen -t <cryptography_method>
 ```
 ssh -i ~/.ssh/<PRIVATE_KEY_FILE> <USERNAME>@<INSTANCE_PUBLIC_IPV4_ADDRESS>
 ```
+* Alternative way (recommended), use the remote SSH configuration.
